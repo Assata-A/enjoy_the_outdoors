@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parks</title>
+    <link rel="stylesheet" href="styles/park.css">
+    <script src="scripts/parks.js"></script>
+    <script src="scripts/locationData.js"></script>
+    <script src="scripts/nationalParkData.js"></script>
+    <script src="scripts/parkTypeData.js"></script>
+</head>
+<body>
+    <a href="index.html">HOME</a>
+    <a href="moutains.html">MOUNTAINS</a>
+
+    <h1>PARKS</h1>
+    <h2>Search by:</h2>
+
+    <label>
+        <input type ="radio" name="searchBy" id="locationRadio">
+        Location(State)
+    </label>
+    <label>
+        <input type = "radio"  name="searchBy" id="parkTypeRadio">
+        Park Type
+    </label>
+    <br> <br>
+    <div class="filters">
+        <label id="locationLabel" for="location">                
+         Location:
+        </label>
+        <select id="location" type="radio" name="location">
+         <option>SELECT LOCATION</option>
+        </select>
+        <br>
+        <label id ="parkTypeLabel" for="parkTypes">
+         Park Type:
+        </label>
+        <select name="parkTypes" id="parkTypes">
+        <option>SELECT PARK TYPE</option>  
+        </select>
+    </div>
+    <div id="results"></div>
+</body>
+
+</html>

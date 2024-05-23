@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountains</title>
+    <link rel="stylesheet" href="styles/mountain.css">
+    <script src="scripts/mountainData.js"></script>
+    <script src="scripts/main.js"></script>
+</head>
+<body>
+<header>
+    <a href="index.html">HOME</a>
+    <a href="parks.html">PARKS</a>
+</header>
+  <h1 class="mainText">The beautiful peaks of our world.. </h1> 
+  <!-- will list beautiful facts about mountains if time permits -->
+<div>
+<label id="mountainLabel" for="mountain">More of our peaks</label>
+<br>
+<br>
+  <select id="mountain">
+    <option>SELECT MOUNTAIN</option>
+  </select>
+</div>
+<div id="mountainResults">?</div>
+<script>
+// const mountainsArray = [
+//     {
+//         name: "Mt. Washington",
+//         elevation: 6288,
+//         effort: "Strenuous",
+//         img: Washington-StoryImage_2.jpg ,
+//         desc: "Mt. Washington (6,288 feet) is the highest peak east of the Mississippi River and north of the Carolinas. The upper part of the mountain has a climate similar to that of northern Labrador and supports a variety of alpine flora and fauna.",
+//         coords: {
+//             lat: 44.270403,
+//             lng: -71.303501
+//         }
+
+  function option(text) {
+  const o = document.createElement("option");
+  o.innerText = text;
+  return o; 
+    };
+
+const mountainSelect = document.getElementById("mountain");
+mountainsArray.forEach(e => {
+let optionE = option(e.name);
+mountainSelect.append(optionE)
+});
+      
+      function mountainInfo(mountains) {
+      const mElement = document.createElement("div");
+      mElement.classList.add("mountainI");
+      mElement.innerHTML = `
+        <hr>
+        <h3>${mountains.name}</h3>
+        <h4>Elevation: ${mountains.elevation}</h4>
+        <img class="mountainImage" src="./images/${mountains.img}" alt="${mountains.name}">
+        <div>${mountains.desc}</div>
+      `;
+      return mElement;
+    };
+
+function displayM(){
+ let filtered = [];
+ filtered = mountainsArray.filter(
+    e => e.name.toUpperCase() === mountainSelect.value.toUpperCase());
+
+mountainResults.innerHTML = " ";
+filtered.forEach(m =>mountainResults.append(mountainInfo(m)));
+}
+
+
+mountainSelect.addEventListener("change", displayM);
+
+</script>
+</body>
+</html>
