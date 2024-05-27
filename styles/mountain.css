@@ -1,0 +1,127 @@
+/* function mountainInfo(mountains) {
+  const mElement = document.createElement("div");
+  mElement.classList.add("mountainI");
+  mElement.innerHTML = `
+    <hr>
+    <h3 id = "mountainName" class = "mountainText1">${mountains.name}</h3>
+    <h4 id = "mountainElevation" class = "mountainText1" >Elevation: ${mountains.elevation}</h4>
+    <img id ="mountainImage" src="./images/${mountains.img}" alt="${mountains.name}">
+    <div id = "mountainDesc" class = "mountainText1" >${mountains.desc}</div>
+  `;
+  return mElement;
+}; */
+
+/* body{
+  
+} */
+.learnM{
+  text-align: center;
+  margin-top: 1.5em;
+}
+body{
+  background-color: #d6d3d38e;
+}
+#mountainName{
+  color: #5c0d0d;
+  font-size: 50px;
+  z-index: -1;
+  text-align: center;
+}
+
+.bgimg{
+  opacity: 5%;
+  position: fixed;
+  z-index: -1;
+}
+
+#mountainImage{
+  border-right: #973939;
+  border-right-style: solid;
+  border-right-width: 1px;
+  padding: 2em;
+  position: relative;
+  left: 18rem;
+  bottom:13em;
+  width: 35em;
+}
+.mountainText1{
+  font-size: 20px;
+  position: relative;
+  top:5rem;
+  left:40rem;
+  text-align: left;
+  width: 30rem;
+  margin-left: 20rem;
+  font-weight: 100%;
+}
+
+select#mountain {
+    /* border-radius: 3em; */
+    background-color: #973939;
+    color: rgb(228, 228, 228);
+    font-weight: bold;
+    height: 4em;
+    position: relative;
+    bottom: 3em;
+    margin-left: 58em;
+  
+}
+.websiteName {
+    font-size: 25px;
+    font-family:monospace;
+    position: relative;
+    z-index: 1;
+    color: rgb(78, 6, 6);
+    text-align: left;
+    margin-top: 25px;
+    margin-left: 10px;
+  }
+  
+  .dropbtn {
+      background-color: #973939;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+    }
+    
+  /* positions the dropdown content*/
+    .dropdown {
+     position: fixed;
+     left: 99em;
+     top: 3em;
+ 
+    }
+    
+    /* Dropdown Content (Hidden by Default) */
+    .dropdownInfo {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    /* Links inside the dropdown */
+    .dropdownInfo a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdownInfo a:hover {
+      background-color: #ddd;
+    }
+    
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdownInfo {
+      display: block;
+    }
+    
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn , select#mountain:hover {
+      background-color: #6d2727;
+    }
+  

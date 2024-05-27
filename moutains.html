@@ -7,36 +7,43 @@
     <link rel="stylesheet" href="styles/mountain.css">
     <script src="scripts/mountainData.js"></script>
     <script src="scripts/main.js"></script>
+    
 </head>
 <body>
-<header>
-    <a href="index.html">HOME</a>
-    <a href="parks.html">PARKS</a>
-</header>
-  <h1 class="mainText">The beautiful peaks of our world.. </h1> 
-  <!-- will list beautiful facts about mountains if time permits -->
+  <img class="bgimg" src="images/A.png">
+<!-- <header>
+  <h1> LEARN MORE ABOUT MOUNTAINS </h1>
+    <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdownInfo">
+          <a href="index.html">Home</a>
+          <a href="moutains.html">Mountains</a>
+        </div>
+      </div>
+</header> -->
+
+ <h1 class="learnM"> LEARN MORE ABOUT MOUNTAINS </h1>
+    <div class="dropdown">
+       <button class="dropbtn">Dropdown</button>
+        <div class="dropdownInfo">
+          <a href="index.html">Home</a>
+          <a href="parks.html">Parks</a>
+        </div>
+      </div>
+    
 <div>
-<label id="mountainLabel" for="mountain">More of our peaks</label>
 <br>
 <br>
   <select id="mountain">
-    <option>SELECT MOUNTAIN</option>
+    <option>DISCOVER MOUNTAINS</option>
   </select>
 </div>
-<div id="mountainResults">?</div>
-<script>
-// const mountainsArray = [
-//     {
-//         name: "Mt. Washington",
-//         elevation: 6288,
-//         effort: "Strenuous",
-//         img: Washington-StoryImage_2.jpg ,
-//         desc: "Mt. Washington (6,288 feet) is the highest peak east of the Mississippi River and north of the Carolinas. The upper part of the mountain has a climate similar to that of northern Labrador and supports a variety of alpine flora and fauna.",
-//         coords: {
-//             lat: 44.270403,
-//             lng: -71.303501
-//         }
 
+<div id="mountainResults"></div>
+
+
+
+<script>
   function option(text) {
   const o = document.createElement("option");
   o.innerText = text;
@@ -54,10 +61,11 @@ mountainSelect.append(optionE)
       mElement.classList.add("mountainI");
       mElement.innerHTML = `
         <hr>
-        <h3>${mountains.name}</h3>
-        <h4>Elevation: ${mountains.elevation}</h4>
-        <img class="mountainImage" src="./images/${mountains.img}" alt="${mountains.name}">
-        <div>${mountains.desc}</div>
+        <h3 id = "mountainName" class = "mountainText1">${mountains.name}</h3>
+        <h4 class = "mountainText1"> Difficulty : ${mountains.effort}</h4>
+        <h4 id = "mountainElevation" class = "mountainText1" >Elevation: ${mountains.elevation}</h4>
+        <div id = "mountainDesc" class = "mountainText1" >${mountains.desc}</div>
+        <img id ="mountainImage" src="./images/${mountains.img}" alt="${mountains.name}">
       `;
       return mElement;
     };
