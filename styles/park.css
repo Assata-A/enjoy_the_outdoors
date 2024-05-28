@@ -1,8 +1,4 @@
-    /* <hr>
-    <h3 class = "parkDesc" id = "parkLocName">${park.LocationName}</h3>
-    <h4 class = "parkDesc" id = "parkLocationDesc" >${park.LocationID}</h4>
-    <div class = "parkDesc" id = "parkStateDesc">${park.State}</div>
-<div class = "parkDesc" id = "parkSiteDesc"> <a href="${link}" class="parkSite">${text}</a></div> */
+
 #parkLocName{
   color: #662323;
   font-size: 25px;
