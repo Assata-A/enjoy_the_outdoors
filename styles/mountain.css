@@ -1,19 +1,4 @@
-/* function mountainInfo(mountains) {
-  const mElement = document.createElement("div");
-  mElement.classList.add("mountainI");
-  mElement.innerHTML = `
-    <hr>
-    <h3 id = "mountainName" class = "mountainText1">${mountains.name}</h3>
-    <h4 id = "mountainElevation" class = "mountainText1" >Elevation: ${mountains.elevation}</h4>
-    <img id ="mountainImage" src="./images/${mountains.img}" alt="${mountains.name}">
-    <div id = "mountainDesc" class = "mountainText1" >${mountains.desc}</div>
-  `;
-  return mElement;
-}; */
 
-/* body{
-  
-} */
 .learnM{
   text-align: center;
   margin-top: 1.5em;
@@ -68,7 +53,6 @@ select#mountain {
 }
 .websiteName {
     font-size: 25px;
-    font-family:monospace;
     position: relative;
     z-index: 1;
     color: rgb(78, 6, 6);

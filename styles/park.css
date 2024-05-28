@@ -1,0 +1,118 @@
+    /* <hr>
+    <h3 class = "parkDesc" id = "parkLocName">${park.LocationName}</h3>
+    <h4 class = "parkDesc" id = "parkLocationDesc" >${park.LocationID}</h4>
+    <div class = "parkDesc" id = "parkStateDesc">${park.State}</div>
+<div class = "parkDesc" id = "parkSiteDesc"> <a href="${link}" class="parkSite">${text}</a></div> */
+.websiteName {
+  font-size: 25px;
+  position: relative;
+  z-index: 1;
+  color: rgb(78, 6, 6);
+  text-align: left;
+  margin-top: 25px;
+  margin-left: 10px;
+}
+.parkSite{
+  text-decoration: none;
+  color: #662323;
+}
+.parkDesc{ 
+  text-align: center;
+}
+body{
+  background-color: rgba(168, 168, 168, 0.171);
+}
+.bgimg{
+ opacity: 25%;
+ position: fixed;
+ bottom: 0.02px;
+ left: 0;
+ z-index: -1;
+ height: 1000px;
+}
+.locationRadio,  .locationRadio2 {
+  accent-color: rgb(161, 51, 51);
+  width: 20px;
+  height: 20px;
+}
+.labelLocation{
+  margin-right: 1em;
+}
+.labelLocation, .labelParks{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.searchByRadio{
+  text-align: center;
+  margin-top: 3em;
+}
+.parkS, .locationS {
+  background-color: rgba(160, 160, 160, 0.493);
+  border-radius: 1em;
+  /* border-style: none; */
+ border-width: 8px;
+ border-color: rgba(160, 160, 160, 0.493);
+ font-weight: bold;
+}
+.filters{
+  margin-left: 50em;
+  margin-bottom: 1em;
+  font-weight: bold;
+  color: rgb(143, 12, 12);
+} 
+.parksMainText{
+  text-align: center;
+  margin-top: 2.5em;
+}
+.searchByL{
+font-size: 15px;
+}
+
+.dropbtn {
+    background-color: #973939;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+/* positions the dropdown content */
+  .dropdown {
+    position: fixed;
+    left: 98.5em;
+    top:2rem ;
+  }
+  
+  /* Dropdown Content */
+  .dropdownInfo {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdownInfo a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdownInfo a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdownInfo {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn, .btnLearnMore:hover {
+
+    background-color: #662323;
+  }

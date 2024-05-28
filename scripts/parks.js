@@ -27,15 +27,16 @@ document.addEventListener("DOMContentLoaded", () => {
         dElement.classList.add("park");
         dElement.innerHTML = `
             <hr>
-            <h3>${park.LocationName}</h3>
-            <h4>${park.LocationID}</h4>
-            <div>${park.State}</div>
+            <h3 class = "parkDesc" id = "parkLocName">${park.LocationName}</h3>
+            <h5 class = "parkDesc" id = "parkCityState">${park.Address} ${park.City}, ${park.State}</h5>
+            <h5 class = "parkDesc" id = "parkPhone">${park.Phone}</h5>
+            <h4 class = "parkDesc" id = "parkLocationDesc" >${park.LocationID}</h4>
         `;
         if (park.hasOwnProperty("Visit")) {
             const link = park.Visit;
             const text = park.LocationName;
             dElement.innerHTML += `
-                <div><a href="${link}" class="parkSite">${text}</a></div>
+                <div class = "parkDesc" id = "parkSiteDesc"> <a href="${link}" class="parkSite">${text}</a></div>
             `;
         }
         return dElement;
@@ -92,13 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
         displayInfo();
     }
 
-
-
-
     locationRadio.addEventListener("click", SearchBy);
     parkTypeRadio.addEventListener("click", SearchBy);
-
-
 
     // Initialize with current selection
     SearchBy();
